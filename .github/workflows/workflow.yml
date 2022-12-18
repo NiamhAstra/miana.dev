@@ -53,7 +53,7 @@ jobs:
       
       # Collect all the files into the correct structure for the deployment
       - name: Build Artifact Structure 📁
-         run: |
+         run: | 
           mkdir ./output
           cp    ./static/*              ./output
           cp    ./templates/root/*      ./output
