@@ -55,9 +55,9 @@ jobs:
       - name: Build Artifact Structure 📁
         run: |
           mkdir ./output
-          cp    ./templates/root/*      ./output
-          cp    ./templates/latex/*.pdf ./output/files
-          cp    ./data.json             ./output/files/data.json
+          cp -r ./templates/root/*      ./output
+          cp -r ./templates/latex/*.pdf ./output/files
+          cp -r ./data.json             ./output/files/data.json
         
       # Setup GitHub pages 
       - name: Setup Pages 🔧
