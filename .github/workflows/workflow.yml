@@ -55,7 +55,6 @@ jobs:
       - name: Build Artifact Structure 📁
         run: |
           mkdir ./output
-          cp    ./static/*              ./output
           cp    ./templates/root/*      ./output
           cp    ./templates/latex/*.pdf ./output/files
           cp    ./data.json             ./output/files/data.json
