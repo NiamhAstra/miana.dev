@@ -6,8 +6,6 @@ url: "https://miana.dev"
 
 header_pages:
   - index.md
-  - talks.md
-  - projects.md
 
 style: dark
 
