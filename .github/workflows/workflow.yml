@@ -1,0 +1,76 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Render and deploy miana.dev
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+
+  # Single deploy job since we're just deploying
+  render-and-deploy:
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+    
+      # Pull down the repository
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      # Compile all the Jinja2 templates in-place based on the data.json file 
+      - name: Render Templates 📄
+        uses: jayamanikharyono/jinja-action@v1.1
+        with:
+          datafile: data.json
+          path: ./templates/**/*.*
+       
+      #  Compile all the LaTeX templates into PDFs for use in the website
+      - name: Compile LaTeX Files 📄
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: |
+            ./templates/latex/resume_windall_miana.tex
+      
+      # Collect all the files into the correct structure for the deployment
+      - name: Build Artifact Structure 📁
+         run: |
+          mkdir ./output
+          cp    ./static/*              ./output
+          cp    ./templates/root/*      ./output
+          cp    ./templates/latex/*.pdf ./output/files
+          cp    ./data.json             ./output/files/data.json
+        
+      # Setup GitHub pages 
+      - name: Setup Pages 🔧
+        uses: actions/configure-pages@v2
+        
+      # Upload the artifacts so they can be deployed to pages
+      - name: Upload Artifacts 📤
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: './output'
+         
+      # Deploy the website
+      - name: Deploy 🚀
+        id: deployment
+        uses: actions/deploy-pages@v1

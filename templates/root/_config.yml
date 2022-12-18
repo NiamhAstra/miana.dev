@@ -1,0 +1,20 @@
+# Site Settings
+title: '{{ name[0] }} {{ name[1] }} {{ name[2] }}'
+description: A website to talk all about me."
+baseurl: ""
+url: "https://miana.dev"
+
+header_pages:
+  - index.md
+  - talks.md
+  - projects.md
+
+style: dark
+
+footer: '<a href="https://discordapp.com/user/{{ contact.discord.id }}">discord</a> | <a href="https://twitter.com/{{ contact.twitter }}">twitter</a> | <a href="https://{{ contact.mastodon.domain }}/@{{ contact.mastodon.user }}">mastodon</a> | <a href="www.linkedin.com/in/{{ contact.linkedin }}">linkedin</a>'
+
+include: [.well-known]
+
+# Build settings
+markdown: kramdown
+remote_theme: b2a3e8/jekyll-theme-console

@@ -1,0 +1,23 @@
+{
+  "subject": "acct:{{ contact.mastodon.user }}@{{ contact.mastodon.domain }}",
+  "aliases": [
+    "https://{{ contact.mastodon.domain }}/@{{ contact.mastodon.user }}",
+    "https://{{ contact.mastodon.domain }}/users/{{ contact.mastodon.user }}"
+  ],
+  "links": [
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://{{ contact.mastodon.domain }}/@{{ contact.mastodon.user }}"
+    },
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://{{ contact.mastodon.domain }}/users/{{ contact.mastodon.user }}"
+    },
+    {
+      "rel": "http://ostatus.org/schema/1.0/subscribe",
+      "template": "https://{{ contact.mastodon.domain }}/authorize_interaction?uri={uri}"
+    }
+  ]
+}

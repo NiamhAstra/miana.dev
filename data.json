@@ -1,0 +1,132 @@
+{
+    "title": "Ms",
+    "name": [
+        "Miana",
+        "Ella",
+        "Windall"
+    ],
+    "pronoun": [
+        "She",
+        "Her",
+        "Hers"
+    ],
+    "contact": {
+        "email": "windall@miana.dev",
+        "phone": "+1 (240) 264 0082",
+        "twitter": "NiamhAstra",
+        "linkedin": "miana-windall",
+        "mastodon": {
+            "user": "NiamhAstra",
+            "domain": "mastodon.social"
+        },
+        "discord": {
+            "id": "219771799532077057",
+            "user": "NiamhAstra#0001"
+        }
+    },
+    "work": [
+        {
+            "company": "Amazon Web Services",
+            "role": "Software Development Engineer",
+            "team": "AWS Foundational Security Services Org",
+            "time": "2021 - PRESENT",
+            "description": {
+                "short": "Lorem ipsum",
+                "long": ""
+            }
+        },
+        {
+            "company": "Amazon.com",
+            "role": "Software Development Engineer",
+            "team": "Alexa Devices - Gaming Org",
+            "time": "2019 - 2021",
+            "description": {
+                "short": "Lorem ipsum",
+                "long": ""
+            }
+        },
+        {
+            "company": "Console",
+            "role": "Software Engineer",
+            "team": "Cloud Software Team",
+            "time": "2018 - 2019",
+            "description": {
+                "short": "Lorem ipsum",
+                "long": ""
+            }
+        },
+        {
+            "company": "National Transportation Insurance",
+            "role": "Software Engineer",
+            "team": "Machine Learning Team",
+            "time": "2016 - 2018",
+            "description": {
+                "short": "Lorem ipsum",
+                "long": ""
+            }
+        },
+        {
+            "company": "WorkingMouse",
+            "role": "Lead Software Engineer",
+            "team": "Internal Tooling & Data Modeling Teams",
+            "time": "2016 - 2018",
+            "description": {
+                "short": "Lorem ipsum",
+                "long": ""
+            }
+        },
+        {
+            "company": "Bilfinger",
+            "role": "Software Engineer Contractor",
+            "team": "Quoting & Invoicing Team",
+            "time": "2014",
+            "description": {
+                "short": "Lorem ipsum",
+                "long": ""
+            }
+        },
+        {
+            "company": "Decompression Dev Studio",
+            "role": "Junior Software Engineer",
+            "team": "Cloud Software Team",
+            "time": "2012",
+            "description": {
+                "short": "Lorem ipsum",
+                "long": ""
+            }
+        }
+    ],
+    "study": [
+        {
+            "institute": "The University of Queensland",
+            "studies": "Software Design & Information Systems Studies",
+            "time": "2013 - 2016"
+        },
+        {
+            "institute": "University of the Sunshine Coast",
+            "studies": "Software Engineering Studies",
+            "time": "2010 - 2011"
+        }
+    ],
+    "publications": [
+        {
+            "title": "RFID Skeleton Keys",
+            "description": "A bone to pick with offline RFID access control systems. A talk given at both defcon 30 and Amazon's One Security conference 2022.",
+            "link": "https://www.youtube.com/watch?v=G2EE_yA7OyI"
+        }
+    ],
+    "skills": [
+        "skills_test"
+    ],
+    "keywords": [
+        "Software Engineering",
+        "Innovation",
+        "Computer Science",
+        "Software Development",
+        "Collaboration",
+        "Technical Communication",
+        "Agile",
+        "Back End",
+        "Scrum"
+    ]
+}
