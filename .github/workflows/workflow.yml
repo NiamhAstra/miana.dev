@@ -48,8 +48,8 @@ jobs:
       - name: Compile LaTeX Files 📄
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: | 
-            ./templates/latex/resume_windall_miana.tex
+          working_directory: ./templates/latex/
+          root_file: "*.tex"
       
       # Collect all the files into the correct structure for the deployment
       - name: Build Artifact Structure 📁
