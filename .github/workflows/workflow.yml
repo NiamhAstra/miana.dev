@@ -48,16 +48,16 @@ jobs:
       - name: Compile LaTeX Files 📄
         uses: xu-cheng/latex-action@v2
         with:
-          working_directory: ./templates/latex/
-          root_file: "*.tex"
+          root_file: | 
+            ./templates/latex/resume_windall_miana.tex
       
       # Collect all the files into the correct structure for the deployment
       - name: Build Artifact Structure 📁
         run: |
           mkdir ./output
-          cp -r ./templates/root/*      ./output
-          cp -r ./templates/latex/*.pdf ./output/files
-          cp -r ./data.json             ./output/files/data.json
+          cp -r ./templates/root/*         ./output
+          cp -r ./data.json                ./output/files/data.json
+          cp -r ./resume_windall_miana.pdf ./output/files/resume_windall_miana.pdf
         
       # Setup GitHub pages 
       - name: Setup Pages 🔧
