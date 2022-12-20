@@ -56,6 +56,7 @@ jobs:
         run: |
           mkdir ./output
           cp -r ./templates/root           ./output
+          mkdir ./output/files
           cp -r ./data.json                ./output/files/data.json
           cp -r ./resume_windall_miana.pdf ./output/files/resume_windall_miana.pdf
         
