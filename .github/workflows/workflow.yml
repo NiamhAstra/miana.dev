@@ -54,11 +54,11 @@ jobs:
       # Collect all the files into the correct structure for the deployment
       - name: Build Artifact Structure 📁
         run: |
+          shopt -s dotglob
           mkdir ./output
-          cp -r ./templates/root/**        ./output
-          mkdir ./output/files
-          cp -r ./data.json                ./output/files/data.json
+          cp -r ./templates/root/*         ./output
           cp -r ./resume_windall_miana.pdf ./output/files/resume_windall_miana.pdf
+          cp -r ./data.json                ./output/files/data.json
         
       # Setup GitHub pages 
       - name: Setup Pages 🔧
