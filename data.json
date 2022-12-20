@@ -96,15 +96,15 @@
             }
         }
     ],
-    "study": [
+    "studies": [
         {
             "institute": "The University of Queensland",
-            "studies": "Software Design & Information Systems Studies",
+            "topic": "Software Design & Information Systems Studies",
             "time": "2013 - 2016"
         },
         {
             "institute": "University of the Sunshine Coast",
-            "studies": "Software Engineering Studies",
+            "topic": "Software Engineering Studies",
             "time": "2010 - 2011"
         }
     ],

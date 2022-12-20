@@ -28,7 +28,7 @@ permalink: /
 
 {% for study in studies -%}
 # {{ study.institute }}
-{{ study.studies }}
+{{ study.topic }}
 {{ study.time }}
 
 {% endfor %}
