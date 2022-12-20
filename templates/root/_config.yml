@@ -1,8 +1,10 @@
 # Site Settings
 title: '{{ name[0] }} {{ name[1] }} {{ name[2] }}'
 description: A website to talk all about me."
-baseurl: ""
-url: "https://miana.dev"
+# baseurl: ""
+# url: "https://miana.dev"
+baseurl: "/miana.dev"
+url: "https://niamhastra.github.io"
 
 header_pages:
   - index.md

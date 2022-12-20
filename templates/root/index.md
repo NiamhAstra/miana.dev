@@ -12,7 +12,7 @@ permalink: /
 # RELEVANT EXPERIENCE:
 
 {% for job in work -%}
-# {{ job.company }}
+## {{ job.company }}
 {{ job.role }}
 {{ job.team }}
 {{ job.time }}
@@ -27,7 +27,7 @@ permalink: /
 # EDUCATION:
 
 {% for study in studies -%}
-# {{ study.institute }}
+## {{ study.institute }}
 {{ study.topic }}
 {{ study.time }}
 
@@ -35,8 +35,8 @@ permalink: /
 # PUBLICATIONS:
 
 {% for publication in publications -%}
-# {{ publication.title }}
-## {{ publication.description }}
+## {{ publication.title }}
+### {{ publication.description }}
 {{ publication.link }}
 
 {% endfor %}
