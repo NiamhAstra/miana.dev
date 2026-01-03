@@ -9,15 +9,15 @@
       <li><a href="/blog/" {% if page.url contains "/blog" %}class="active"{% endif %}>Blog</a></li>
       <li><a href="/contact/" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a></li>
     </ul>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span class="hamburger"></span>
-    </button>
+    <div class="mobile-nav-wrapper">
+      <ul class="nav-icons">
+        <li><a href="/" aria-label="Home" {% if page.url == "/" %}class="active"{% endif %}>{% include icons/home.svg %}</a></li>
+        <li><a href="/blog/" aria-label="Blog" {% if page.url contains "/blog" %}class="active"{% endif %}>{% include icons/newspaper.svg %}</a></li>
+        <li><a href="/contact/" aria-label="Contact" {% if page.url == "/contact/" %}class="active"{% endif %}>{% include icons/mail.svg %}</a></li>
+      </ul>
+      <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+    </div>
   </nav>
-  <div class="mobile-nav" aria-hidden="true">
-    <ul class="mobile-nav-links">
-      <li><a href="/">About</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/contact/">Contact</a></li>
-    </ul>
-  </div>
 </header>

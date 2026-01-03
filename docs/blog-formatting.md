@@ -162,6 +162,28 @@ The blog index page has filter buttons that show/hide posts by tag. The JavaScri
 
 Calculated automatically based on word count. Shows up in the post metadata. The include is at `_includes/reading-time.html` if you want to tweak the words-per-minute assumption.
 
+## Thumbnails
+
+Blog cards on the index page can display a thumbnail image. Add it to the frontmatter:
+
+```yaml
+---
+title: "Your Post Title"
+thumbnail: /assets/images/blog/your-image.png
+---
+```
+
+**Ideal resolution: 1200 × 400px**
+
+The card displays images at full width × 160px height with `object-fit: cover`. A 1200 × 400px image gives you:
+- 2× pixel density for retina displays
+- Wide landscape aspect ratio that matches the card shape
+- Minimal cropping since the aspect ratio is close to the display size
+
+Store thumbnails in `assets/images/blog/`. If no thumbnail is set, the card shows a gradient placeholder.
+
+Square or portrait images will work but most of the image gets cropped. Stick to landscape.
+
 ## Things to Avoid
 
 Don't use HTML comments for TODOs or notes... they'll end up in the compiled output. Use actual comments in your editor or just delete unfinished sections.

@@ -95,15 +95,73 @@
   }
 }
 
-.nav-toggle {
+.mobile-nav-wrapper {
   display: none;
-  padding: $space-sm;
   
   @media (max-width: $breakpoint-md) {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: $space-sm;
   }
+}
+
+.nav-icons {
+  display: flex;
+  gap: $space-xs;
+  
+  li {
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity $transition-fast, transform $transition-fast;
+    pointer-events: none;
+    
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        transition-delay: #{($i - 1) * 50}ms;
+      }
+    }
+  }
+  
+  .nav-expanded & li {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+  
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: $color-text-secondary;
+    border-radius: 8px;
+    transition: color $transition-fast, background $transition-fast;
+    
+    &:hover {
+      color: $color-primary;
+      background: $color-surface;
+    }
+    
+    &.active {
+      color: $color-primary;
+    }
+  }
+  
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: $space-sm;
+  cursor: pointer;
   
   .hamburger {
     width: 24px;
@@ -145,48 +203,4 @@
   }
 }
 
-.mobile-nav {
-  display: none;
-  
-  @media (max-width: $breakpoint-md) {
-    display: block;
-    position: fixed;
-    top: 73px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: $color-bg;
-    padding: $space-lg;
-    transform: translateX(100%);
-    transition: transform $transition-base;
-    
-    &[aria-hidden="false"] {
-      transform: translateX(0);
-    }
-  }
-}
 
-.mobile-nav-links {
-  display: flex;
-  flex-direction: column;
-  gap: $space-md;
-  
-  a {
-    display: block;
-    padding: $space-md;
-    font-size: $font-size-lg;
-    font-weight: 500;
-    color: $color-text;
-    border-radius: 8px;
-    transition: background $transition-fast;
-    
-    &:hover {
-      background: $color-surface;
-      color: $color-primary;
-    }
-  }
-}
-
-body.nav-open {
-  overflow: hidden;
-}

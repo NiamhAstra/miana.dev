@@ -32,33 +32,21 @@ function initScrollAnimations() {
 
 function initMobileNav() {
   const navToggle = document.querySelector('.nav-toggle');
-  const mobileNav = document.querySelector('.mobile-nav');
-  const body = document.body;
+  const navWrapper = document.querySelector('.mobile-nav-wrapper');
   
-  if (!navToggle || !mobileNav) return;
+  if (!navToggle || !navWrapper) return;
   
   navToggle.addEventListener('click', () => {
     const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
-    
     navToggle.setAttribute('aria-expanded', !isOpen);
-    mobileNav.setAttribute('aria-hidden', isOpen);
-    body.classList.toggle('nav-open', !isOpen);
+    navWrapper.classList.toggle('nav-expanded', !isOpen);
   });
   
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && body.classList.contains('nav-open')) {
+    if (e.key === 'Escape' && navWrapper.classList.contains('nav-expanded')) {
       navToggle.setAttribute('aria-expanded', 'false');
-      mobileNav.setAttribute('aria-hidden', 'true');
-      body.classList.remove('nav-open');
+      navWrapper.classList.remove('nav-expanded');
     }
-  });
-  
-  mobileNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navToggle.setAttribute('aria-expanded', 'false');
-      mobileNav.setAttribute('aria-hidden', 'true');
-      body.classList.remove('nav-open');
-    });
   });
 }
 
