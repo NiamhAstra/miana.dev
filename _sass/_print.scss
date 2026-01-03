@@ -1,0 +1,141 @@
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  body {
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+  
+  .site-header,
+  .site-footer,
+  .nav-toggle,
+  .mobile-nav,
+  .btn,
+  .cta-section,
+  .social-links,
+  .tag-filters,
+  .anchor-link,
+  .toast,
+  .skip-link {
+    display: none !important;
+  }
+  
+  h1 {
+    font-size: 24pt;
+    margin-bottom: 0.5em;
+  }
+  
+  h2 {
+    font-size: 16pt;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    page-break-after: avoid;
+  }
+  
+  h3 {
+    font-size: 13pt;
+    page-break-after: avoid;
+  }
+  
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  a {
+    text-decoration: underline;
+    
+    &[href^="http"]:after {
+      content: " (" attr(href) ")";
+      font-size: 0.9em;
+      color: #666 !important;
+    }
+    
+    &[href^="/"]:after,
+    &[href^="#"]:after {
+      content: none;
+    }
+  }
+  
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+  
+  .hero-photo {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  pre, code {
+    font-family: 'Courier New', monospace !important;
+    font-size: 9pt;
+  }
+  
+  pre {
+    border: 1px solid #ccc !important;
+    padding: 0.5em !important;
+    page-break-inside: avoid;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  .container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .timeline {
+    &::before {
+      display: none;
+    }
+  }
+  
+  .timeline-item {
+    border-left: 2px solid #ccc;
+    padding-left: 1em;
+    margin-bottom: 1.5em;
+    page-break-inside: avoid;
+  }
+  
+  .skill-badge {
+    display: inline;
+    border: none;
+    padding: 0;
+    
+    &::after {
+      content: ", ";
+    }
+    
+    &:last-child::after {
+      content: "";
+    }
+    
+    svg {
+      display: none;
+    }
+  }
+  
+  .section {
+    page-break-before: auto;
+  }
+  
+  .experience-section {
+    page-break-before: auto;
+  }
+  
+  .blog-card-tags,
+  .reading-time {
+    display: none;
+  }
+  
+  article {
+    max-width: 100%;
+  }
+}

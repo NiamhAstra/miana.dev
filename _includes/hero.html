@@ -1,0 +1,21 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-photo-container">
+        <img src="{{ site.data.resume.personal.photo }}" alt="{{ site.data.resume.personal.name.first }} {{ site.data.resume.personal.name.last }}" class="hero-photo" width="200" height="200">
+      </div>
+      <div class="hero-text">
+        <h1>{{ site.data.resume.personal.name.first }} {{ site.data.resume.personal.name.middle }} {{ site.data.resume.personal.name.last }}</h1>
+        <p class="hero-title">{{ site.data.resume.personal.title }}</p>
+        <p class="hero-tagline">{{ site.data.resume.summary.short }}</p>
+        <div class="hero-cta">
+          <a href="/assets/files/miana-winter-resume.pdf" class="btn btn-primary" download>
+            {% include icons/download.svg %}
+            Download Resume
+          </a>
+          <a href="/contact/" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

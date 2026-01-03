@@ -1,0 +1,46 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}/#person",
+      "name": "{{ site.data.resume.personal.name.first }} {{ site.data.resume.personal.name.middle }} {{ site.data.resume.personal.name.last }}",
+      "jobTitle": "{{ site.data.resume.personal.title }}",
+      "description": "{{ site.data.resume.summary.short }}",
+      "url": "{{ site.url }}",
+      "image": "{{ site.url }}/assets/images/profile.jpg",
+      "sameAs": [
+        "https://github.com/{{ site.social.github }}",
+        "https://linkedin.com/in/{{ site.social.linkedin }}"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "{{ site.data.resume.experience[0].company }}"
+      },
+      "knowsAbout": [
+        {% for category in site.data.resume.skills %}{% for skill in category.items %}"{{ skill.name }}"{% unless forloop.last and forloop.parentloop.last %},{% endunless %}{% endfor %}{% endfor %}
+      ]
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "{{ site.url }}/#profilepage",
+      "dateCreated": "2026-01-01",
+      "dateModified": "{{ site.time | date_to_xmlschema }}",
+      "mainEntity": {
+        "@id": "{{ site.url }}/#person"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}",
+      "name": "{{ site.title }}",
+      "description": "{{ site.description }}",
+      "publisher": {
+        "@id": "{{ site.url }}/#person"
+      }
+    }
+  ]
+}
+</script>

@@ -1,0 +1,62 @@
+@use '../variables' as *;
+@use 'sass:color';
+
+.contact-form {
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: $space-lg;
+  
+  label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: $space-sm;
+    color: $color-text;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: $space-md;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    font-family: $font-sans;
+    font-size: $font-size-base;
+    transition: border-color $transition-fast, box-shadow $transition-fast;
+    
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.1);
+    }
+    
+    &::placeholder {
+      color: $color-text-secondary;
+    }
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+}
+
+.form-status {
+  margin-top: $space-md;
+  padding: $space-md;
+  border-radius: 8px;
+  display: none;
+  
+  &.success {
+    display: block;
+    background: rgba($color-success, 0.1);
+    color: color.adjust($color-success, $lightness: -10%);
+  }
+  
+  &.error {
+    display: block;
+    background: rgba($color-error, 0.1);
+    color: $color-error;
+  }
+}

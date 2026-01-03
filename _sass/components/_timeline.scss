@@ -1,0 +1,96 @@
+@use '../variables' as *;
+
+.timeline {
+  position: relative;
+  padding-left: $space-xl;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: $color-primary-light;
+  }
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: $space-xl;
+  
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.timeline-marker {
+  position: absolute;
+  left: calc(-#{$space-xl} + 3px);
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  background: $color-primary;
+  border: 3px solid $color-bg;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px $color-primary-light;
+  transition: transform $transition-fast;
+  
+  .timeline-item:hover & {
+    transform: scale(1.2);
+  }
+}
+
+.timeline-date {
+  font-size: $font-size-sm;
+  font-weight: 600;
+  color: $color-primary;
+  margin-bottom: $space-sm;
+}
+
+.timeline-card {
+  background: $color-bg;
+  border: 1px solid $color-border;
+  border-radius: 12px;
+  padding: $space-lg;
+  transition: all $transition-fast;
+  
+  .timeline-item:hover & {
+    border-color: $color-primary-light;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  h3 {
+    font-size: $font-size-xl;
+    margin-bottom: $space-xs;
+  }
+}
+
+.timeline-company {
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+  margin-bottom: $space-md;
+}
+
+.timeline-summary {
+  margin-bottom: $space-md;
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.timeline-achievements {
+  list-style: disc;
+  padding-left: $space-lg;
+  
+  li {
+    margin-bottom: $space-sm;
+    color: $color-text-secondary;
+    font-size: $font-size-sm;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

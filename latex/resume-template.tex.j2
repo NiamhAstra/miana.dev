@@ -1,0 +1,91 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontawesome5}
+\usepackage{needspace}
+
+\definecolor{primary}{HTML}{7C3AED}
+\definecolor{primarydark}{HTML}{5B21B6}
+\definecolor{primarylight}{HTML}{EDE9FE}
+\definecolor{textmain}{HTML}{1F2937}
+\definecolor{textsecondary}{HTML}{6B7280}
+
+\IfFontExistsTF{Inter}{
+  \setmainfont{Inter}
+}{
+  \setmainfont{Latin Modern Roman}
+}
+
+\titleformat{\section}{\normalsize\bfseries\color{primary}}{}{0em}{}[\vspace{-6pt}\textcolor{primarylight}{\titlerule[1.5pt]}]
+\titlespacing{\section}{0pt}{20pt}{3pt}
+
+\setlist[itemize]{leftmargin=1.5em, itemsep=0pt, topsep=2pt, parsep=0pt}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=primary,
+  urlcolor=primary
+}
+
+\begin{document}
+
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[primary] (current page.north west) rectangle ([yshift=-4pt]current page.north east);
+\end{tikzpicture}
+
+\begin{center}
+  {\Large\bfseries\color{textmain} {{ resume.personal.name.first }} {{ resume.personal.name.middle }} {{ resume.personal.name.last }}}\\[4pt]
+  {\color{primary}\textbf{ {{- resume.personal.title -}} }}\\[6pt]
+  {\small\color{textsecondary}
+  \faIcon{linkedin} \href{https://linkedin.com/in/{{ resume.personal.contact.linkedin }}}{ {{- resume.personal.contact.linkedin -}} } \quad
+  \faIcon{github} \href{https://github.com/{{ resume.personal.contact.github }}}{ {{- resume.personal.contact.github -}} } \quad
+  \faIcon{globe} \href{https://{{ resume.personal.contact.website }}}{ {{- resume.personal.contact.website -}} }}
+\end{center}
+
+\section*{\faIcon{user} Professional Summary}
+{\small\color{textmain} {{ resume.summary.short | latex }}}
+
+\section*{\faIcon{code} Skills}
+{% for category in resume.skills %}
+\noindent\begin{minipage}{\textwidth}
+{\small\textbf{\color{textmain} {{- category.category | latex -}} :} {% for skill in category['items'] %}{{ skill.name | latex }}{% if not loop.last %} \textcolor{primarylight}{$\bullet$} {% endif %}{% endfor %}}
+\end{minipage}
+{% if not loop.last %}\\[2pt]{% endif %}
+{% endfor %}
+
+\section*{\faIcon{briefcase} Experience}
+{% for job in resume.experience %}
+\noindent\begin{minipage}{\textwidth}
+\textbf{\color{textmain} {{- job.title | latex -}} } \hfill {\small\color{primary} {{ job.start_date }} -- {{ job.end_date }}}\\
+{\small\color{textsecondary}\textit{ {{- job.company | latex -}} } | {{ job.location | latex }}}
+
+{\small\color{textmain} {{ job.summary | replace('\n', ' ') | latex }}}
+{% if job.achievements %}
+\begin{itemize}
+{% for achievement in job.achievements %}
+  \item[\textcolor{primary}{\faIcon{check}}] {\small\color{textmain} {{ achievement | latex }}}
+{% endfor %}
+\end{itemize}
+{% endif %}
+\end{minipage}
+{% if not loop.last %}\vspace{6pt}{% endif %}
+{% endfor %}
+
+\section*{\faIcon{graduation-cap} Education}
+{% for edu in resume.education %}
+\noindent\begin{minipage}{\textwidth}
+{\small\textbf{\color{textmain} {{- edu.institution | latex -}} } \hfill {\color{textsecondary} {{ edu.location | latex }}}\\
+{\color{textsecondary} {{ edu.focus | latex }}{% if edu.field %} -- {{ edu.field | latex }}{% endif %}}}
+\end{minipage}
+{% if not loop.last %}\\[4pt]{% endif %}
+{% endfor %}
+
+\end{document}

@@ -1,0 +1,23 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        {% include monogram.svg %}
+        <span>&copy; {{ site.time | date: '%Y' }} Miana Ella Winter</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="/">About</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          {% include icons/github.svg %}
+        </a>
+        <a href="https://linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          {% include icons/linkedin.svg %}
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

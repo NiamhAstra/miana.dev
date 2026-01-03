@@ -1,0 +1,66 @@
+@use '../variables' as *;
+
+.site-footer {
+  background: $color-surface;
+  border-top: 1px solid $color-border;
+  padding: $space-xl 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-lg;
+  
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  color: $color-text-secondary;
+  
+  .monogram {
+    width: 32px;
+    height: 32px;
+    color: $color-primary;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  gap: $space-lg;
+  
+  a {
+    color: $color-text-secondary;
+    transition: color $transition-fast;
+    
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.footer-social {
+  display: flex;
+  gap: $space-md;
+  
+  a {
+    color: $color-text-secondary;
+    transition: color $transition-fast;
+    
+    &:hover {
+      color: $color-primary;
+    }
+    
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

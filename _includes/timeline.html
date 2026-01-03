@@ -1,0 +1,25 @@
+<section class="experience-section section">
+  <div class="container">
+    <h2>Experience</h2>
+    <div class="timeline">
+      {% for job in site.data.resume.experience %}
+      <div class="timeline-item animate-on-scroll">
+        <div class="timeline-marker"></div>
+        <div class="timeline-date">{{ job.start_date }} – {{ job.end_date }}</div>
+        <div class="timeline-card">
+          <h3>{{ job.title }}</h3>
+          <p class="timeline-company">{{ job.company }} · {{ job.location }}</p>
+          <div class="timeline-summary">{{ job.summary | markdownify }}</div>
+          {% if job.achievements.size > 0 %}
+          <ul class="timeline-achievements">
+            {% for achievement in job.achievements %}
+            <li>{{ achievement }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+@use '../variables' as *;
+
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: $space-sm $space-md;
+  background-color: $color-primary-light;
+  color: $color-primary-dark;
+  border-radius: 9999px;
+  font-size: $font-size-sm;
+  font-weight: 500;
+  transition: all $transition-fast;
+  
+  .skill-icon {
+    font-size: 1.1em;
+    line-height: 1;
+  }
+  
+  &:hover {
+    background-color: $color-primary;
+    color: white;
+  }
+}
+
+.tag {
+  display: inline-block;
+  padding: $space-xs $space-sm;
+  background-color: $color-surface;
+  color: $color-text-secondary;
+  border-radius: 4px;
+  font-size: $font-size-sm;
+}

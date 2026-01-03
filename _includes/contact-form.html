@@ -1,0 +1,21 @@
+<form action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" class="contact-form" id="contact-form">
+  <input type="text" name="_gotcha" style="display: none" tabindex="-1" autocomplete="off">
+  <input type="hidden" name="_subject" value="New contact from miana.io">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
+  </div>
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required rows="5" placeholder="Your message..."></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">
+    Send Message
+    {% include icons/arrow-right.svg %}
+  </button>
+  <div class="form-status" id="form-status" aria-live="polite"></div>
+</form>

@@ -1,0 +1,22 @@
+<section class="skills-section section">
+  <div class="container">
+    <h2>Skills & Technologies</h2>
+    <div class="skills-grid">
+      {% for category in site.data.resume.skills %}
+      <div class="skills-category animate-on-scroll">
+        <h3>{{ category.category }}</h3>
+        <div class="skill-badges">
+          {% for skill in category.items %}
+          <span class="skill-badge">
+            {% if skill.icon %}
+            <i class="devicon-{{ skill.icon }}-plain skill-icon"></i>
+            {% endif %}
+            <span>{{ skill.name }}</span>
+          </span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,298 @@
+# =============================================================================
+# MIANA WINTER — RESUME DATA
+# =============================================================================
+# This file is the single source of truth for resume content.
+# Used by: Jekyll site (web resume) and LaTeX template (PDF generation)
+# =============================================================================
+
+# =============================================================================
+# PERSONAL INFORMATION
+# =============================================================================
+personal:
+  name:
+    first: "Miana"
+    middle: "Ella"
+    last: "Winter"
+    former: "Windall"
+  
+  title: "Staff Software Engineer"
+  photo: "/assets/images/profile.jpg"
+  
+  contact:
+    linkedin: "miana-winter"
+    github: "NiamhAstra"
+    website: "miana.io"
+  
+  location:
+    city: "Surrey"
+    country: "UK"
+    display: "Based in Surrey, UK"
+  
+  availability:
+    open: false
+    message: "Not currently looking"
+
+# =============================================================================
+# PROFESSIONAL SUMMARY
+# =============================================================================
+summary:
+  short: >-
+    Backend systems architect and technical leader who turns complex problems 
+    into scalable solutions. 10+ years building high-volume production systems 
+    across gaming, cloud infrastructure, and fintech.
+  
+  full: |
+    I'm a detail-oriented and technically curious software engineer with broad 
+    experience designing, building, and maintaining high-volume production systems. 
+    Over my career, I've led teams through complex technical challenges, mentored 
+    engineers, and driven improvements in code quality, process, and collaboration. 
+    My strengths lie in system architecture, backend development, and operational 
+    excellence, whether that means refining CI/CD pipelines, automating workflows, 
+    or ensuring robust security and reliability.
+
+    I enjoy translating business needs into scalable solutions and thrive on solving 
+    tough cross-team problems. I'm comfortable balancing hands-on coding with 
+    technical leadership, and I take pride in fostering a culture of learning, 
+    clear communication, and continuous improvement.
+
+# =============================================================================
+# SKILLS & TECHNOLOGIES
+# =============================================================================
+skills:
+  - category: "Languages & Scripts"
+    items:
+      - name: "Kotlin"
+        icon: "kotlin"
+      - name: "Java"
+        icon: "java"
+      - name: "Python"
+        icon: "python"
+      - name: "TypeScript"
+        icon: "typescript"
+      - name: "SQL"
+      - name: "Bash"
+        icon: "bash"
+      - name: "PowerShell"
+        icon: "powershell"
+      - name: "PHP"
+        icon: "php"
+      - name: "VB.Net"
+      - name: "GoLang"
+        icon: "go"
+
+  - category: "Platforms & Cloud"
+    items:
+      - name: "Linux"
+        icon: "linux"
+      - name: "macOS"
+        icon: "apple"
+      - name: "Windows"
+        icon: "windows8"
+      - name: "AWS"
+        icon: "amazonwebservices"
+      - name: "Azure"
+        icon: "azure"
+      - name: "CloudFlare"
+        icon: "cloudflare"
+      - name: "Kubernetes"
+        icon: "kubernetes"
+      - name: "Android"
+        icon: "android"
+      - name: "Embedded"
+
+  - category: "Tools & DevOps"
+    items:
+      - name: "Docker"
+        icon: "docker"
+      - name: "Git"
+        icon: "git"
+      - name: "SVN"
+        icon: "subversion"
+      - name: "Jenkins"
+        icon: "jenkins"
+      - name: "Atlassian Suite"
+        icon: "jira"
+      - name: "Maven"
+        icon: "maven"
+      - name: "Gradle"
+        icon: "gradle"
+      - name: "pip"
+      - name: "JetBrains Suite"
+        icon: "jetbrains"
+
+# =============================================================================
+# AREAS OF EXPERTISE
+# =============================================================================
+expertise:
+  - "Team & Project Management"
+  - "System Architecture Design"
+  - "Data Modelling & Migration"
+  - "Operational Excellence"
+  - "Agile Methodologies"
+  - "Integration, Unit, & Automated E2E Testing"
+  - "Cloud Infrastructure"
+  - "IT Security Analysis & Management"
+  - "Software Development Best Practice"
+  - "DevOps & Infrastructure Management"
+  - "Process Automation"
+  - "Hiring & Team Building"
+  - "Containerization"
+  - "Event Sourcing"
+  - "Issue Resolution"
+
+# =============================================================================
+# WORK EXPERIENCE
+# =============================================================================
+experience:
+  # --- Current Role (Full Detail) ---
+  - company: "Wargaming.net / DPS Games"
+    location: "Guildford, UK"
+    title: "Backend Lead Software Engineer"
+    start_date: "2024"
+    end_date: "Present"
+    current: true
+    summary: |
+      Led the architecture and development of backend services supporting all 
+      non-gameplay features for Steel Hunters, an upcoming online game. Drove 
+      the design and delivery of new features, collaborating closely with product, 
+      project management, and multiple engineering teams to ensure seamless 
+      integration and alignment with project goals. Balanced hands-on feature 
+      delivery with technical leadership, mentoring, and process improvement.
+    achievements:
+      - "Delivered robust, production-ready backend systems, enabling an extensible, stable, and scalable foundation for the game's launch."
+      - "Championed code quality and test coverage, doubling coverage in six months, reducing QA bugs, and accelerating merge speed through improved standards and automation."
+      - "Introduced automated code formatting and static analysis pipelines, enhancing code consistency and streamlining code reviews by reducing low-value review feedback."
+      - "Authored comprehensive API documentation and introduced a searchable portal, improving onboarding and reducing support demands for external teams."
+      - "Implemented process improvements including mandatory design documentation, stakeholder reviews, and automated validation tooling, reducing miscommunication and unnecessary rework."
+      - "Mentored and onboarded new engineers, facilitated daily stand-ups and retrospectives, and partnered with leadership to strengthen collaboration and delivery across teams."
+
+  # --- AWS (Full Detail) ---
+  - company: "AWS – Security"
+    location: "Virginia, USA"
+    title: "Software Development Engineer"
+    start_date: "2021"
+    end_date: "2023"
+    summary: |
+      Worked to identify and investigate large/complex problems requiring 
+      cross-team approach for resolution. Liaised with various teams to provide 
+      opportunities to benefit from proposed solutions, while leading said teams 
+      through the integration and implementation process. Acted as a floating 
+      engineering resource, providing support to teams working on critical business 
+      projects with tight deadlines.
+    achievements:
+      - "Proposed modernization project for critical internal service in AWS, transitioning from legacy bare metal hardware to cloud which resulted in faster and more stable user experience, reduced system operation costs by ~70%, and eliminated significant operational pain points for the team."
+      - "Uncovered monitoring and alerting gap across numerous teams and designed a standardized solution. Collaborated with various teams to integrate the proposed solution, closing the gap on reporting client-side issues. Decreased average time to identify production issues and simplified fault analysis, while enhancing overall operational efficiency."
+      - "Introduced high code quality standards and automation across multiple teams. Defined standards and leveraged tools such as linters and code analysis tools. Improved codebase quality, consistency, and developer velocity. Minimized unnecessary comments and conversations in code reviews by automatically handling code styling and code smells."
+
+  # --- Amazon Alexa (Full Detail) ---
+  - company: "Amazon – Alexa Gaming"
+    location: "California, USA"
+    title: "Software Development Engineer"
+    start_date: "2019"
+    end_date: "2021"
+    summary: |
+      Contributed to projects related to Alexa, Amazon's voice assistant, with 
+      a focus on gaming functionality. Built and validated projects on non-standard 
+      environments, necessitating creation of dedicated CI/CD pipeline infrastructure. 
+      Proposed, designed, and led development of custom CI/CD pipeline infrastructure. 
+      Collaborated on projects to enhance SDK utilized by Alexa Skill developers for 
+      game development on Alexa platform.
+    achievements:
+      - "Proposed, designed, and led development of custom CI/CD pipeline infrastructure for non-standard environments."
+      - "Achieved substantial time savings for developers by automating build, testing, and validation processes."
+
+  # --- Console (Summary Only) ---
+  - company: "Console"
+    location: "Brisbane, Australia"
+    title: "Backend Software Engineer"
+    start_date: "2018"
+    end_date: "2019"
+    summary: |
+      Contributed to development efforts on a cutting-edge microservice-based 
+      property management and trust accounting SaaS platform, leveraging AWS 
+      infrastructure. Utilized Kotlin and Spring Boot to architect and develop 
+      services, while ensuring high-performance and robust functionality. Headed 
+      creation of a complex auditing system using event sourcing, fulfilling 
+      legislative requirements and completing ahead of schedule. Advocated for 
+      and steered migration to upgrade Spring Boot version before EOL.
+    achievements: []
+
+  # --- National Transport Insurance (Summary Only) ---
+  - company: "National Transport Insurance"
+    location: "Brisbane, Australia"
+    title: "Full Stack Software Engineer"
+    start_date: "2016"
+    end_date: "2018"
+    summary: |
+      Built and maintained an internal insurance book and sales management system 
+      using Java, JSP, JSF, and Spring, running on JBoss EAP. Collaborated with 
+      data science team to support machine learning projects involving dockerized 
+      Python services. Led development of automated data ingestion for acquired 
+      businesses and spearheaded OCR and ML project to enhance manual data entry 
+      efficiency.
+    achievements: []
+
+  # --- Working Mouse (Summary Only) ---
+  - company: "Working Mouse"
+    location: "Brisbane, Australia"
+    title: "Team Leader / Software Engineer"
+    start_date: "2015"
+    end_date: "2016"
+    summary: |
+      Led internal tooling team to develop and maintain critical code and test 
+      generation tools vital to company's operations. Engaged in rapid problem-solving 
+      and prototyping. Revamped core modeling and code generation tools, achieving 
+      over 95% code generation accuracy. Engineered reverse engineering tools for 
+      legacy code modernization, reducing project duration by weeks.
+    achievements: []
+
+  # --- Bilfinger (Summary Only) ---
+  - company: "Bilfinger Water Technologies Australia"
+    location: "Brisbane, Australia"
+    title: "Contract Full Stack Software Engineer"
+    start_date: "2014"
+    end_date: "2014"
+    summary: |
+      Contract role delivering full stack software engineering solutions.
+    achievements: []
+
+  # --- Decompression (Summary Only) ---
+  - company: "Decompression Development Studio"
+    location: "Sunshine Coast, Australia"
+    title: "Junior Full Stack Software Engineer"
+    start_date: "2012"
+    end_date: "2012"
+    summary: |
+      Early career role as a junior full stack developer in a game development studio.
+    achievements: []
+
+# =============================================================================
+# EDUCATION
+# =============================================================================
+education:
+  - institution: "University of Queensland"
+    location: "Brisbane, Australia"
+    focus: "Information Technology Studies"
+    field: "Software Design & Information Systems"
+
+  - institution: "University of Sunshine Coast"
+    location: "Sunshine Coast, Australia"
+    focus: "Software Engineering Studies"
+    field: "Headstart Program"
+
+  - institution: "University of Sydney"
+    location: "Sydney, Australia"
+    focus: "National Computer Science School"
+    field: ""
+
+# =============================================================================
+# SPEAKING ENGAGEMENTS
+# =============================================================================
+# Placeholder for future speaking engagements
+speaking:
+  # - event: "Conference Name"
+  #   title: "Talk Title"
+  #   date: "2026-05"
+  #   location: "City, Country"
+  #   slides_url: ""
+  #   video_url: ""

@@ -1,0 +1,32 @@
+@use 'variables' as *;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-secondary {
+  color: $color-text-secondary;
+}
+
+.separator {
+  margin: 0 $space-sm;
+  color: $color-text-secondary;
+}
+
+.empty-state {
+  text-align: center;
+  color: $color-text-secondary;
+  padding: $space-2xl;
+}

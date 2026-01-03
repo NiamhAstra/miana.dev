@@ -1,0 +1,57 @@
+# Site Settings
+title: "Miana Ella Winter"
+description: "Staff Software Engineer — Backend Systems, Cloud Infrastructure, Technical Leadership"
+url: "https://miana.io"
+baseurl: ""
+
+# Author (for meta tags)
+author:
+  name: "Miana Ella Winter"
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:slug/
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# Sass
+sass:
+  style: compressed
+
+# Default Front Matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules/
+  - scripts/
+  - latex/
+  - "*.sh"
+  - blueprint.md
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Contact Form
+formspree_id: "mwvpnwva"
+
+# Social Links
+social:
+  github: "NiamhAstra"
+  linkedin: "miana-winter"

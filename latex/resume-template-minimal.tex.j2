@@ -1,0 +1,76 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage{parskip}
+
+\IfFontExistsTF{Inter}{
+  \setmainfont{Inter}
+}{
+  \setmainfont{Latin Modern Roman}
+}
+
+\titleformat{\section}{\normalsize\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{16pt}{3pt}
+
+\setlist[itemize]{leftmargin=1.5em, itemsep=0pt, topsep=2pt, parsep=0pt}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+\begin{document}
+
+\begin{center}
+  {\Large\bfseries {{ resume.personal.name.first }} {{ resume.personal.name.middle }} {{ resume.personal.name.last }}}\\[2pt]
+  {{ resume.personal.title }}\\[2pt]
+  {\small \href{https://linkedin.com/in/{{ resume.personal.contact.linkedin }}}{LinkedIn} |
+  \href{https://github.com/{{ resume.personal.contact.github }}}{GitHub} |
+  \href{https://{{ resume.personal.contact.website }}}{ {{- resume.personal.contact.website -}} }}
+\end{center}
+
+\section*{Professional Summary}
+{\small {{ resume.summary.short | latex }}}
+
+\section*{Skills}
+{% for category in resume.skills %}
+\noindent\begin{minipage}{\textwidth}
+{\small\textbf{ {{- category.category | latex -}} :} {% for skill in category['items'] %}{{ skill.name | latex }}{% if not loop.last %}, {% endif %}{% endfor %}}
+\end{minipage}
+{% if not loop.last %}\\{% endif %}
+{% endfor %}
+
+\section*{Experience}
+{% for job in resume.experience %}
+\noindent\begin{minipage}{\textwidth}
+\textbf{ {{- job.title | latex -}} } \hfill {\small {{ job.start_date }} -- {{ job.end_date }}}\\
+{\small\textit{ {{- job.company | latex -}} } | {{ job.location | latex }}}
+
+{\small {{ job.summary | replace('\n', ' ') | latex }}}
+{% if job.achievements %}
+\begin{itemize}
+{% for achievement in job.achievements %}
+  \item {\small {{ achievement | latex }}}
+{% endfor %}
+\end{itemize}
+{% endif %}
+\end{minipage}
+{% if not loop.last %}\vspace{6pt}{% endif %}
+{% endfor %}
+
+\section*{Education}
+{% for edu in resume.education %}
+\noindent\begin{minipage}{\textwidth}
+{\small\textbf{ {{- edu.institution | latex -}} } | {{ edu.location | latex }}\\
+{{ edu.focus | latex }}{% if edu.field %} -- {{ edu.field | latex }}{% endif %}}
+\end{minipage}
+{% if not loop.last %}\\[2pt]{% endif %}
+{% endfor %}
+
+\end{document}

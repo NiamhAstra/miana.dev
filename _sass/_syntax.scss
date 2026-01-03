@@ -1,0 +1,34 @@
+@use 'variables' as *;
+
+.highlight {
+  background: $dracula-bg;
+  border-radius: 8px;
+  padding: $space-md;
+  overflow-x: auto;
+  margin: $space-lg 0;
+  
+  pre {
+    margin: 0;
+    background: transparent;
+  }
+  
+  code {
+    font-family: $font-mono;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: $dracula-fg;
+  }
+  
+  .c, .c1, .cm, .cs, .cp { color: $dracula-comment; }
+  .k, .kc, .kd, .kn, .kp, .kr, .kt { color: $dracula-pink; }
+  .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx, .sr { color: $dracula-yellow; }
+  .m, .mi, .mf, .mh, .mo, .il { color: $dracula-purple; }
+  .nf, .fm { color: $dracula-green; }
+  .nc, .nn, .no { color: $dracula-cyan; }
+  .n, .na, .nb, .nv, .vc, .vg, .vi { color: $dracula-fg; }
+  .o, .ow { color: $dracula-pink; }
+  .p { color: $dracula-fg; }
+  .nb { color: $dracula-cyan; }
+  .no { color: $dracula-purple; }
+  .err { color: $dracula-red; }
+}

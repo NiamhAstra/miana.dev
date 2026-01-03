@@ -1,0 +1,30 @@
+{% if site.data.resume.speaking and site.data.resume.speaking.size > 0 %}
+<section class="speaking-section section">
+  <div class="container">
+    <h2>Speaking Engagements</h2>
+    <div class="speaking-grid">
+      {% for talk in site.data.resume.speaking %}
+      <div class="speaking-card animate-on-scroll">
+        <h3>{{ talk.title }}</h3>
+        <p class="speaking-event">{{ talk.event }}</p>
+        <p class="speaking-meta">
+          <span>{{ talk.date }}</span>
+          <span class="separator">&middot;</span>
+          <span>{{ talk.location }}</span>
+        </p>
+        {% if talk.slides_url or talk.video_url %}
+        <div class="speaking-links">
+          {% if talk.slides_url %}
+          <a href="{{ talk.slides_url }}" target="_blank" rel="noopener noreferrer">Slides</a>
+          {% endif %}
+          {% if talk.video_url %}
+          <a href="{{ talk.video_url }}" target="_blank" rel="noopener noreferrer">Video</a>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

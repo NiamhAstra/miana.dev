@@ -1,0 +1,62 @@
+@use '../variables' as *;
+
+.error-page {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-2xl $space-lg;
+}
+
+.error-content {
+  text-align: center;
+  
+  .monogram {
+    width: 80px;
+    height: 80px;
+    color: $color-primary;
+    margin: 0 auto $space-lg;
+  }
+  
+  h1 {
+    font-size: 5rem;
+    color: $color-primary;
+    margin-bottom: $space-md;
+    
+    @media (max-width: $breakpoint-md) {
+      font-size: 4rem;
+    }
+  }
+  
+  .error-message {
+    font-size: $font-size-lg;
+    color: $color-text-secondary;
+    margin-bottom: $space-xl;
+    max-width: 40ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .btn {
+    margin-bottom: $space-xl;
+  }
+}
+
+.error-nav {
+  padding-top: $space-lg;
+  border-top: 1px solid $color-border;
+  color: $color-text-secondary;
+  
+  span {
+    margin-right: $space-md;
+  }
+  
+  a {
+    margin: 0 $space-sm;
+    color: $color-primary;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<section class="education-section section">
+  <div class="container">
+    <h2>Education</h2>
+    <div class="education-grid">
+      {% for edu in site.data.resume.education %}
+      <div class="education-card animate-on-scroll">
+        <h3>{{ edu.institution }}</h3>
+        <p class="education-focus">{{ edu.focus }}</p>
+        {% if edu.field != "" %}
+        <p class="education-field">{{ edu.field }}</p>
+        {% endif %}
+        <p class="education-location">{{ edu.location }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+<section class="expertise-section section">
+  <div class="container">
+    <h2>Areas of Expertise</h2>
+    <ul class="expertise-list">
+      {% for item in site.data.resume.expertise %}
+      <li class="expertise-item animate-on-scroll">{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

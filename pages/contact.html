@@ -1,0 +1,31 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+---
+<section class="contact-page">
+  <div class="container">
+    <h1>Get in Touch</h1>
+    <div class="contact-grid">
+      <div class="contact-form-container">
+        {% include contact-form.html %}
+      </div>
+      <div class="contact-sidebar">
+        <div class="connect-section">
+          <h2>Connect</h2>
+          {% include social-links.html %}
+        </div>
+        <div class="location-section">
+          <div class="location-item">
+            {% include icons/map-pin.svg %}
+            <span>{{ site.data.resume.personal.location.display }}</span>
+          </div>
+          <div class="availability-status {% if site.data.resume.personal.availability.open %}available{% else %}unavailable{% endif %}">
+            <span class="status-dot"></span>
+            <span>{{ site.data.resume.personal.availability.message }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

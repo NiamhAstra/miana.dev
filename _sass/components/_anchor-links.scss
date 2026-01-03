@@ -1,0 +1,34 @@
+@use '../variables' as *;
+
+.anchor-heading {
+  position: relative;
+  
+  .anchor-link {
+    position: absolute;
+    left: -1.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity $transition-fast;
+    color: $color-text-secondary;
+    
+    &:hover {
+      color: $color-primary;
+    }
+    
+    svg {
+      width: 1em;
+      height: 1em;
+    }
+  }
+  
+  &:hover .anchor-link {
+    opacity: 1;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .anchor-heading .anchor-link {
+    opacity: 0.5;
+  }
+}

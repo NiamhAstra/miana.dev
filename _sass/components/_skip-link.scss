@@ -1,0 +1,18 @@
+@use '../variables' as *;
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $color-primary;
+  color: white;
+  padding: $space-sm $space-md;
+  border-radius: 0 0 8px 8px;
+  z-index: 9999;
+  transition: top $transition-fast;
+  
+  &:focus {
+    top: 0;
+  }
+}

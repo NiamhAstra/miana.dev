@@ -1,0 +1,51 @@
+@use '../variables' as *;
+
+.education-section {
+  h2 {
+    text-align: center;
+    margin-bottom: $space-xl;
+  }
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $space-lg;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.education-card {
+  background: $color-bg;
+  border: 1px solid $color-border;
+  border-radius: 12px;
+  padding: $space-lg;
+  transition: all $transition-fast;
+  
+  &:hover {
+    border-color: $color-primary-light;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  h3 {
+    font-size: $font-size-lg;
+    margin-bottom: $space-sm;
+  }
+}
+
+.education-focus {
+  color: $color-primary;
+  font-weight: 500;
+  margin-bottom: $space-xs;
+}
+
+.education-field {
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+  margin-bottom: $space-sm;
+}
+
+.education-location {
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+}

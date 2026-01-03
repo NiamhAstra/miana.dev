@@ -1,0 +1,10 @@
+<svg class="monogram" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="M12 80 L12 20" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+  <path d="M88 80 L88 20" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+  <path d="M12 20 L35 50" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+  <path d="M65 50 L88 20" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+  <path d="M12 80 L35 50" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+  <path d="M65 50 L88 80" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+  <path d="M35 50 L50 65 L65 50" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M35 50 L50 35 L65 50" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

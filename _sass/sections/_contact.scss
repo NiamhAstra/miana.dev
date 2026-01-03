@@ -1,0 +1,95 @@
+@use '../variables' as *;
+
+.contact-page {
+  padding: $space-xl 0;
+  
+  h1 {
+    margin-bottom: $space-xl;
+  }
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-2xl;
+  
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: $space-xl;
+  }
+}
+
+.contact-sidebar {
+  h2 {
+    font-size: $font-size-xl;
+    margin-bottom: $space-lg;
+  }
+}
+
+.connect-section {
+  margin-bottom: $space-xl;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-md;
+  color: $color-text;
+  font-weight: 500;
+  transition: color $transition-fast;
+  
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.location-section {
+  padding-top: $space-lg;
+  border-top: 1px solid $color-border;
+}
+
+.location-item {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  color: $color-text-secondary;
+  margin-bottom: $space-md;
+  
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.availability-status {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  
+  .status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $color-text-secondary;
+  }
+  
+  &.available .status-dot {
+    background: $color-success;
+    box-shadow: 0 0 0 3px rgba($color-success, 0.2);
+  }
+  
+  &.unavailable .status-dot {
+    background: $color-text-secondary;
+  }
+}
